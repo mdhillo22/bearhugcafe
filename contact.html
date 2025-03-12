@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Hug Cafe</title>
+
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="contact.css">
+
+    <script>
+        function showBrowserSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            document.getElementById("sizeInfo").innerHTML = "Width: " + w + "<br>Height: " + h;
+        }
+    </script>
+        
+</head>
+<body onresize="showBrowserSize();" onload="showBrowserSize();">
+    <div id="main">
+        <a href="home.html"><header></header></a> 
+        <nav>
+            <div class="dropdown">
+                <!-- hidden buttons -->
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="bakery.html">Bakery</a>
+                    <a href="beverage.html">Beverages</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faqs.html">FAQs</a>
+                </div>
+                <!-- end of hidden buttons-->
+
+                <!-- options button -->
+                <button onclick="myFunction();" class="dropbtn">
+                    &#8801;
+                </button>
+                <!-- end of options button -->
+            </div> <!-- end of dropdown-->
+        </nav>
+        
+        <!-- article -->
+        <article id="article1">
+            <h1>Contact Us</h1> <hr width="100px" color="pink">
+            <div class="about-text">
+                <h2>Customer Service</h2>
+                <p>If you have any questions or concerns, please contact our customer service line or email. You can call 888-888-888 or email csbearhugcafe@gmail.com. </p>
+                <br>
+                <h2>Partnership and Sponsorship Requests</h2>
+                <p>Want us to consider a partnership or sponsorship? Email us information about the request at bearhugcafe@gmail.com.</p>
+            </div>            
+        </article> <!-- end of article -->
+        
+        <footer>
+            <small>
+                <a href="privacy.html">Privacy</a> &nbsp;&nbsp;
+                <a href="terms.html">Terms</a> &nbsp;&nbsp;
+                <a href="accessibility.html">Accessibility</a> &nbsp;&nbsp;
+                <a href="cookies.html">Cookie Preferences</a> &nbsp;&nbsp;
+                | &copy; 2025 Bear Hug Cafe
+            </small>
+        </footer>
+    </div> <!--end of main-->
+
+    <div id="sizeInfo"></div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+div#sizeInfo {position: fixed;
+    box-sizing: border-box;
+    background-color: yellow;
+    width: 100px;
+    height: 50px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+    display: none; /* change to none later */
+}
+
+/* small - default - less than 501px - no media query */
+body { margin: 0px; }
+
+@font-face {
+    font-family: apple-font1;
+    src:url(AppleGaramond-Light.ttf);
+}
+
+@font-face {
+    font-family: apple-font2;
+    src:url(AppleGaramond-Italic.ttf);
+}
+
+div#main {
+    position: static;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFEFD5;
+}
+
+header {
+    position:static;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90px;
+    background-image: url(header_graphic.jpg);
+    background-size:contain;
+    background-repeat:inherit;
+}
+
+article {
+    min-height: 400px; 
+    height: auto;
+    overflow: hidden;
+}
+
+
+#article1 {
+    background-color: #FFDEAD;
+    color: #552b18;
+}
+
+h1 { margin: 25px; text-align: center; font-size: 26px;}
+
+h2 { margin: 25px; text-align: center; }
+
+p { font-size: 16px; line-height: 22px; font-family: apple-font1; }
+
+footer {
+    position: static;
+    box-sizing: border-box;
+    background-color: #DEB887;
+    width: 100%; 
+    height: 100px; 
+    padding-top: 10px; 
+    text-align: center; 
+    border-top: 1px dashed gray;
+}
+
+/* change hover color of footer links */
+footer a:hover {
+    color: #A0522D; 
+}
+
+/* change active color of footer links */
+footer a:active {
+    color: #CD853F;
+}
+
+/* change default font color of footer links */
+footer a {
+    color: black; 
+}
+
+small { font-size: 15px; font-family: apple-font2; color: #333333; }
+
+nav {
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 48px;
+    padding-top: 0px;
+    background-color: #A0522D;
+    text-align: center;
+}
+
+/* style the options button for small nav */
+.dropbtn {
+    background-color: #A0522D;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    font-family: arial;
+    border: none;
+    cursor: pointer;
+    width: 160px; 
+    text-align: center;
+}
+
+.dropbtn:hover {
+    background-color: #FFF0F5;
+    color: #A0522D;
+}   
+
+.dropbtn:focus {
+    background-color: #CD853F;
+    color: #A0522D;
+} 
+
+/* position the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* style the dropdown */
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #A0522D;
+    color: white;
+    min-width: 160px;
+    z-index: 1;
+    bottom: 50px;
+    left: 0px;
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* style the dropdown links */
+.dropdown-content a {
+    display: block;
+    color: white;
+    font-family: apple-font1;
+    font-size: 25px;
+    padding: 16px;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+
+.dropdown-content a:last-child {
+    margin-right: 0px;
+}
+
+/* change hover color of dropdown links */
+.dropdown-content a:hover {
+    background-color: #FFF0F5;
+    color: #A0522D;
+}
+
+/* change active color of dropdown links */
+.dropdown-content a:active {
+    background-color: #CD853F;
+    color: rgb(255, 255, 255);
+}
+
+/* define "show" class for JavaScript to make dropdown appear */
+.show { display: block; }
+
+/* article styling */
+.row {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.box {
+    background-color: rgb(255, 244, 249);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 0 0 120px; 
+    border-radius: 5px;
+    text-align: center;
+    max-width: 120px;
+    max-height: 162px;
+}
+
+.box img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* medium - 661 to 999px */
+@media (min-width: 661px) {
+    div#main { width: 96%; }
+
+    header {
+        position:static;
+        box-sizing: border-box;
+        width: 100%;
+        height: 150px;
+        background-image: url(header_graphic.jpg);
+        background-size:contain;
+        background-repeat:inherit;
+    }
+
+    body { 
+        background-image: url(background.jpg); 
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    nav { display: block; position: static; }
+
+    .dropbtn { display: none; }
+
+    #myDropdown { display: block; position: static; padding: 0px; }
+
+    .dropdown-content a { 
+        display: inline-block; 
+        font-size: 24px; 
+        padding: 10px 15px 10px 15px; 
+        margin-right: -4px;
+        border-bottom: none;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    article {
+        min-height: 400px; 
+        height: auto;
+        overflow: hidden;
+    }
+
+    .row {
+        gap: 10px; 
+        justify-content: center; 
+    }
+
+    .box {
+        flex: 0 0 31%; 
+        max-width: 180px; 
+        max-height: 200px;
+    }
+
+    .box img {
+        width: 100%; 
+        height: 140px; 
+    }
+}
+
+/* large - 1000px and up */
+@media (min-width: 1000px) {
+    body { 
+        background-image: url(background.jpg); 
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    div#main { width: 950px; }
+
+    article {
+        min-height: 500px; 
+        height: auto; 
+        overflow: hidden;
+    }
+    
+    footer { clear: both; }
+    
+    .box {
+        flex: 0 0 220px; 
+        max-width: 250px;
+        max-height: 280px; 
+    }
+    
+    .box img {
+        width: 250px;
+        height: 220px; 
+    } 
+}
+

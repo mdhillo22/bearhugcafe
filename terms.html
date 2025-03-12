@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Hug Cafe</title>
+
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="terms.css">
+
+    <script>
+        function showBrowserSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            document.getElementById("sizeInfo").innerHTML = "Width: " + w + "<br>Height: " + h;
+        }
+    </script>
+        
+</head>
+<body onresize="showBrowserSize();" onload="showBrowserSize();">
+    <div id="main">
+        <a href="home.html"><header></header></a> 
+        <nav>
+            <div class="dropdown">
+                <!-- hidden buttons -->
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="bakery.html">Bakery</a>
+                    <a href="beverage.html">Beverages</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faqs.html">FAQs</a>
+                </div>
+                <!-- end of hidden buttons-->
+
+                <!-- options button -->
+                <button onclick="myFunction();" class="dropbtn">
+                    &#8801;
+                </button>
+                <!-- end of options button -->
+            </div> <!-- end of dropdown-->
+        </nav>
+        
+        <!-- article -->
+        <article id="article1">
+            <h1>Terms of Use</h1> <hr width="100px" color="pink">
+            <div class="about-text">
+                <p>By using Bear Hug Cafe, you are agreeing to the following terms:</p>
+                <br><p><b>Privacy:</b> Your personal information is handled by our privacy policy.</p>
+                <p><b>Payment:</b> You must pay for your order at the time it is purchased.</p>
+                <p><b>Changes to Terms:</b> Our terms can be changed at any time.</p>
+                <br><p>For questions and concerns, please email us at termsbearhugcafe@gmail.com.
+                <br><br>Last updated: 3/11/2025</p>
+            </div>            
+        </article> <!-- end of article -->
+        
+        <footer>
+            <small>
+                <a href="privacy.html">Privacy</a> &nbsp;&nbsp;
+                <a href="terms.html">Terms</a> &nbsp;&nbsp;
+                <a href="accessibility.html">Accessibility</a> &nbsp;&nbsp;
+                <a href="cookies.html">Cookie Preferences</a> &nbsp;&nbsp;
+                | &copy; 2025 Bear Hug Cafe
+            </small>
+        </footer>
+    </div> <!--end of main-->
+
+    <div id="sizeInfo"></div>
+</body>
+</html>
